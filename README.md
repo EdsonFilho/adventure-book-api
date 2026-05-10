@@ -209,8 +209,7 @@ Rules use the **Strategy pattern** — adding a new rule requires only creating 
 
 ## Future Improvements
 
-- [x] `AddBookUseCase` — submit a new book via API (runs `BookValidator`)
-- [ ] `@Version` on `GameSession` for optimistic locking (concurrent move safety)
-- [ ] Add [Mongock](https://www.mongock.io/) for production-grade migrations
-- [ ] Authentication / authorisation
-- [ ] Player profiles and session history
+- **Optimistic Locking:** Add a `@Version` field to `GameSession` to handle `OptimisticLockingFailureException`. This will prevent lost updates if a user attempts to make concurrent moves on the same session.
+- **Database Migrations:** Integrate [Mongock](https://www.mongock.io/) for production-grade, version-controlled MongoDB schema and data migrations.
+- **Security:** Implement Spring Security with JWT authentication to properly isolate player sessions.
+- **Player Profiles:** Expand the lightweight `playerName` identifier into a full `User` domain entity to track session history and global player statistics.
