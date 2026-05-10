@@ -1,0 +1,20 @@
+{
+  "title": "The Endless Hallway (No Ending)",
+  "author": "Edson",
+  "difficulty": "HARD",
+  "categories": ["horror"],
+  "sections": [
+    {
+      "id": "1",
+      "type": "BEGIN",
+      "text": "You enter a dark hallway.",
+      "options": [{ "description": "Walk forward", "gotoId": 2 }]
+    },
+    {
+      "id": "2",
+      "type": "NODE",
+      "text": "The hallway continues forever.",
+      "options": [{ "description": "Keep walking", "gotoId": 1 }]
+    }
+  ]
+}

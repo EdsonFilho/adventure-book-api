@@ -1,0 +1,20 @@
+{
+  "title": "The Dead End (No Options)",
+  "author": "Edson",
+  "difficulty": "EASY",
+  "categories": ["trap"],
+  "sections": [
+    {
+      "id": "1",
+      "type": "BEGIN",
+      "text": "You fall into a pit. You can't get out. There is nothing to do.",
+      "options": []
+    },
+    {
+      "id": "2",
+      "type": "END",
+      "text": "The end.",
+      "options": []
+    }
+  ]
+}

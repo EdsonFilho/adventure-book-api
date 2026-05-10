@@ -1,0 +1,26 @@
+{
+  "title": "The Split Reality (Multiple Beginnings)",
+  "author": "Edson",
+  "difficulty": "HARD",
+  "categories": ["sci-fi"],
+  "sections": [
+    {
+      "id": "1",
+      "type": "BEGIN",
+      "text": "You wake up in reality A.",
+      "options": [{ "description": "Go to sleep", "gotoId": 3 }]
+    },
+    {
+      "id": "2",
+      "type": "BEGIN",
+      "text": "You wake up in reality B.",
+      "options": [{ "description": "Go to sleep", "gotoId": 3 }]
+    },
+    {
+      "id": "3",
+      "type": "END",
+      "text": "Game over.",
+      "options": []
+    }
+  ]
+}

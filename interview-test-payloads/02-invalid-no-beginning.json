@@ -1,0 +1,22 @@
+{
+  "title": "The Infinite Loop (No Beginning)",
+  "author": "Edson",
+  "difficulty": "HARD",
+  "categories": ["mystery"],
+  "sections": [
+    {
+      "id": "1",
+      "type": "NODE",
+      "text": "You are lost in a maze.",
+      "options": [
+        { "description": "Go left", "gotoId": 2 }
+      ]
+    },
+    {
+      "id": "2",
+      "type": "END",
+      "text": "You starve.",
+      "options": []
+    }
+  ]
+}

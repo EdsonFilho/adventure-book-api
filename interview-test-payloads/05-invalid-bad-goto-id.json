@@ -1,0 +1,20 @@
+{
+  "title": "The Broken Path (Invalid Next Section)",
+  "author": "Edson",
+  "difficulty": "EASY",
+  "categories": ["glitch"],
+  "sections": [
+    {
+      "id": "1",
+      "type": "BEGIN",
+      "text": "You see a door.",
+      "options": [{ "description": "Open it", "gotoId": 999 }]
+    },
+    {
+      "id": "2",
+      "type": "END",
+      "text": "You shouldn't be here.",
+      "options": []
+    }
+  ]
+}

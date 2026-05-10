@@ -1,0 +1,22 @@
+{
+  "title": "The Quest for the Crystal (Valid)",
+  "author": "Edson",
+  "difficulty": "EASY",
+  "categories": ["fantasy", "adventure"],
+  "sections": [
+    {
+      "id": "1",
+      "type": "BEGIN",
+      "text": "You stand before a dark cave. Do you enter?",
+      "options": [
+        { "description": "Enter the cave", "gotoId": 2 }
+      ]
+    },
+    {
+      "id": "2",
+      "type": "END",
+      "text": "You find the crystal! You win.",
+      "options": []
+    }
+  ]
+}

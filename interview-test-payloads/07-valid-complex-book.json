@@ -1,0 +1,65 @@
+{
+  "title": "The Haunted Manor (Valid & Complex)",
+  "author": "Edson",
+  "difficulty": "MEDIUM",
+  "categories": ["horror", "mystery"],
+  "sections": [
+    {
+      "id": "1",
+      "type": "BEGIN",
+      "text": "You stand before the haunted manor. The door is slightly ajar.",
+      "options": [
+        { "description": "Push the door open and enter", "gotoId": 2 },
+        { "description": "Climb through a broken window", "gotoId": 3 }
+      ]
+    },
+    {
+      "id": "2",
+      "type": "NODE",
+      "text": "You are in the main hall. A ghost suddenly appears and attacks you!",
+      "options": [
+        { 
+          "description": "Fight the ghost", 
+          "gotoId": 4,
+          "consequence": {
+            "type": "LOSE_HEALTH",
+            "value": "4",
+            "text": "The ghost chills you to the bone, but you manage to push past it."
+          }
+        },
+        { 
+          "description": "Run upstairs", 
+          "gotoId": 5 
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "type": "NODE",
+      "text": "You cut yourself on the broken glass, but you're inside. You find a first-aid kit on a table.",
+      "options": [
+        { 
+          "description": "Use the first-aid kit", 
+          "gotoId": 2,
+          "consequence": {
+            "type": "GAIN_HEALTH",
+            "value": "2",
+            "text": "You bandage your cuts and feel slightly better."
+          }
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "type": "END",
+      "text": "You defeated the ghost and found the hidden treasure in the parlour. You win!",
+      "options": []
+    },
+    {
+      "id": "5",
+      "type": "END",
+      "text": "You trip on the stairs and fall back down into the ghost's arms. Game over.",
+      "options": []
+    }
+  ]
+}
