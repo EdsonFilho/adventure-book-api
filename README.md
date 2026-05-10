@@ -30,6 +30,34 @@ Then navigate to `http://localhost:8081` to manage your MongoDB data. Log in wit
 
 ---
 
+## Assessment Objectives Mapping
+
+Here is how this API fulfills the original assessment specification:
+
+### Validation Conditions
+> *A book should be invalid if any of the following conditions is met:*
+
+| Specification | Implementation |
+|---|---|
+| **Book has none, or more than one beginning** | Enforced by `BeginSectionRule.java` |
+| **Book has no ending (but can have multiple)** | Enforced by `EndSectionRule.java` |
+| **Book has invalid next section id** | Enforced by `SectionReferenceRule.java` (checks all `gotoId` values) |
+| **A non-ending section has no options** | Enforced by `NonEndingSectionOptionsRule.java` |
+
+### Core Objectives
+> *Your API should:*
+
+| Objective | Implementation |
+|---|---|
+| **1. List all existing books and allow searching by title, author, category or difficulty.** | `GET /api/books` accepts optional query parameters handled by `ListBooksUseCase`. |
+| **2. Retrieve a book’s details and allow for adding/removing categories.** | `GET /api/books/{id}` <br/> `POST /api/books/{id}/categories` <br/> `DELETE /api/books/{id}/categories/{name}` |
+| **3. Allow to read a book and jump between sections.** | `POST /api/sessions` starts reading. <br/> `POST /api/sessions/{id}/moves` jumps between sections. |
+| **4. Handle the consequences mechanism for a player.** | `GameSession.applyConsequence()` dynamically updates player health (min 0) and status (`DEAD`). |
+| **5. (extra) Allow for different players each with its own progress.** | Implemented via the `playerName` field on `GameSession`. Every player gets a unique, resumable session ID. |
+| **6. (extra) Allow for adding new books to the collection.** | `POST /api/books` accepts full JSON payloads and runs the structural validator before saving. |
+
+---
+
 ## Tech Stack
 
 | Layer | Technology |
